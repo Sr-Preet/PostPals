@@ -1,0 +1,415 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PostPals</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lato:wght@700&display=swap"
+      rel="stylesheet">
+
+      
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lato:wght@700&display=swap"
+    rel="stylesheet">
+
+    <style>
+      body {
+    background-color: rgb(249, 247, 247);
+    margin: 0;
+}
+
+.background-img {
+    background-image: url('../images/signin-bgimg.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    margin: auto;
+    /* background-color: rgb(244, 234, 211); */
+  background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1); 
+} 
+
+img{
+    align-content: center;
+    max-height: min-content;
+    max-width: fit-content;
+}
+
+
+.footer{
+    width:100%;
+    bottom:0;
+  }
+  
+  .socialIcon{
+    display: flex;
+    justify-content: center;
+  }
+  .socialIcon a{
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50%;
+    background-color: rgb(192, 192, 216);
+  }
+  .socialIcon a i{
+    font-size: 2em;
+    color: rgb(7, 7, 6);
+    opacity: 0.9;
+  
+  }
+  .footerNav{
+    margin:30px 0; 
+  }
+  .footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+  }
+  .footerNav ul li a{
+    color: #fff;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+  }
+  .footerbottom{
+    padding:10px;
+    text-align: center;
+  }
+  .navbar
+  {
+    top: 0;
+    width: 100%;
+  }
+  .align
+{
+    margin-top: 50px;
+    border-radius: 12px;
+    background-color: white;
+}
+.btn-product{
+    background-color: #092a37;
+    color: white;
+    width: 30%;
+}
+.btn-product:hover{
+    border: 1px solid #092a37;
+    color: #092a37;
+    width: 30%;
+}
+
+@media only screen and (max-width: 850px) {
+
+.footerNav ul li a{
+  color: #fff;
+  margin: 20px 10px;
+  text-decoration: none;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+}
+
+
+.nav-pills .nav-link {
+color: #092a37 ;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .nav-link.active:focus,
+.nav-pills .nav-link.active:hover {
+color: white ;
+background-color: #092a37;
+}
+
+/* Optional: Hover styles */
+.nav-pills .nav-link:hover {
+color: white ;
+background-color: #092a37;
+}
+.btn-product{
+background-color: #092a37;
+color: white;
+}
+.btn-product:hover{
+border: 1px solid #092a37;
+color: #092a37;
+}
+
+.nav-link.active{
+font-family: 'Lato', sans-serif;
+}
+.navbar-toggler-icon {
+color: black; /* Set the color of the hamburger icon */
+}
+
+
+#popup {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 5;
+}
+
+#popup-bg {
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.9;
+}
+
+#popup-front {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 30%;
+    height: 250px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    border: 5px solid #007bff;
+}
+
+#popup-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+}
+
+#popup-close-icon {
+    position: absolute;
+    top: 0px;
+    right: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0.5;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#popup-close-icon:hover {
+    opacity: 1;
+}
+
+#popup-btn {
+    width: 30%;
+}
+
+#op {
+    font-size: 24px;
+}
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white"
+  style="min-height: 10vh;background-color: white;margin: 0;padding: 0px 35px;">
+  <a class="navbar-brand" style="font-size: 50px; font-family: 'Dancing Script', cursive;color: #092a37;"
+      href="/">PostPals</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav  ml-auto">
+          <li class="nav-item">
+              <a class="nav-link active ps-5" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle ps-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Categories
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/latest_blog/Travel">Travel</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/latest_blog/Food">Food</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/latest_blog/Lifestyle">Lifestyle</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/latest_blog/Others">Others</a>
+              </div>
+            </li>
+            
+          <li class="nav-item">
+              <a class="nav-link ps-5" href="/latest_blog">
+                  Latest Blogs</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link ps-5" style="color: #092a37;font-size: 18px;" data-toggle="modal" data-target="#exampleModal" href="/login"><i class="fa fa-search" aria-hidden="true"></i></a>
+        </li>
+
+          <li class="nav-item">
+              <a class="nav-link ps-5" style="color: #092a37;font-size: 18px;" href="/login"><i
+                      class="fa-solid fa-user-large"></i></a>
+          </li>
+
+      </ul>
+  </div>
+</nav>
+
+
+{% if data.success==False %}
+<div id="popup">
+  <div id="popup-bg">
+  </div>
+
+  <div id="popup-front">
+      <div id="popup-body">
+
+          <p id="popup-close-icon" style="margin-top: 15px;" class="close">X</p>
+
+          <i class="fa fa-exclamation-circle" style="font-size: 48px;color: red;" aria-hidden="true"></i>
+          <p  id="op" style="margin-top: 15px;">{{data.message}}</p>
+
+          <button class="btn btn-product cl" >Ok</button>            
+      </div>
+
+  </div>
+
+
+
+</div>
+{% endif %}
+
+      <div class="container" style="margin: 10vh auto;">
+        <div class="row">
+          <div class="col-md-6 bsb-tpl-bg-platinum order-md-1">
+              <div class="d-flex flex-column justify-content-between h-100 p-3 p-md-4 p-xl-5">
+                <img class="img-fluid rounded mx-auto mt-4 my-4" loading="lazy" src="https://images.pexels.com/photos/1255062/pexels-photo-1255062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <p class="mb-0">Not a member yet? <a id='register' href="/signup" class="link-secondary text-decoration-none">Register now</a></p>
+              </div>
+            </div>
+            <div class="col-md-6 bsb-tpl-bg-lotion order-md-2">
+              <div class="p-3 p-md-4 p-xl-5">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="mb-5">
+                        
+                <h3 class="m-0" style="font-family: 'Dancing Script', cursive;font-size: 48px;color: #092a37;">Welcome Back!</h3>
+                <p style="font-family: 'Lato', sans-serif; margin-top: 14px;">To keep connected with us please login with your personal information by using email and password.</p>
+                    </div>
+                  </div>
+                </div>
+                <form action="/login" method="Post">
+                  <div class="row gy-3 gy-md-4 overflow-hidden">
+                    <div class="col-12">
+                      <label for="exampleInputEmail1" class="form-label">Number or Email <span class="text-danger">*</span></label>
+                      <input type="text" name="email" class="form-control "id="exampleInputEmail1" placeholder="Enter your number or email" required >
+                    </div>
+                    <div class="col-12">
+                      <label for="exampleInputPassword1" class="form-label">Password <span class="text-danger">*</span></label>
+                      <input type="password" name="password" class="form-control " id="exampleInputPassword1" value="" required>
+                    </div>
+                    <div class="col-12">
+                      <div style="display: flex;justify-content: center;margin-top: 18px;">
+                        <button class="btn  btn-product " type="submit" id="button">Log in</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="footer" style="background-color: #092a37;color: white; padding: 20px;">
+          <div class="socialIcon">
+              <a href="" style="background-color: white;"><i class="fa-brands fa-facebook" target="_blank"></i></a>
+              <a style="background-color: white;" href="#" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a>
+              <a style="background-color: white;" href="##"><i class="fa-brands fa-twitter" target="_blank"></i></a>
+              <a style="background-color: white;" href=""><i class="fa-brands fa-whatsapp" target="_blank"></i></a>
+          </div>
+          <div class="footerNav">
+              <ul>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Terms & Service</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <!--<li><a href="../Feedback/index.html">Feedback</a></li>-->
+              </ul>
+          </div>
+          <div class="footerbottom">
+              <p>2023, PostPals. All rights reserved</p>
+          </div>
+      </div>
+ 
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Blog Search</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form class="p-2" action="/search" method="POST">
+                <input type="text" required placeholder="Type a word to search for a blog " class="form-control" name="search" />
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+
+    <script src="./script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>$(".close").click(function () {
+        $("#popup").hide();
+    });
+
+    $(".cl").click(function () {
+        $("#popup").hide();
+    });
+
+  
+  </script>
+
+</body>
+</html>
